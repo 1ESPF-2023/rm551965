@@ -1,26 +1,79 @@
-//RECUPERANDO O BOTÃO1 COM O GETELEMENTBYID
-const botao = document.getElementById("btn-1");
 
-//RECUPERANDO UM ITEM ESPECIFICO COM A 
-//FUNÇÃO querySelector(parâmetro)
+//Recuperando o botão com o getElementById
+// const botao = document.getElementById("btn-1");
+
+//Recuperar um item especifico com a
+//função querySelector(parâmetro)
 // const seletor = document.querySelector("li")
 // console.log(seletor.textContent)
 
-// Recuperar uma lista de elementos com a function querySelectoraALL
-const seletores = document.querySelectorAll("li");
+//Recuerar uma lista de elementos com a função
+//querySelecorAll
+// const seletores = document.querySelectorAll("li");
+ 
+// seletores.forEach((item)=>{
 
-seletores.forEach((item)=>{
+//     if (item.textContent == "Item-15") {
+//         let meuItem = item;
+//         console.log(`Item selecionado : ${meuItem.textContent}`);
+//         meuItem.textContent = "TÁ DOMINADO!!"   
+//     }
+// })
 
-    if(item.textContent == "item-15") {
-        let meuItem = item;
-        console.log(`Items selecionados : ${meuItem.textContent}`);
-        meuItem.textContent = "Ta dominado!"
-    }
-})
-
+//Para estudar
 //setTimeOut
-//serInterval
+//setInterval
 //Random
 //Math.Ceil
 //Math.Random
 //Math.Floor
+
+function mudarCor() {
+
+    let r = 0;
+    let g = 0;
+    let b = 0;
+
+    r = Math.round(Math.random() * 255);
+    g = Math.round(Math.random() * 255);
+    b = Math.round(Math.random() * 255);
+
+    const cabecalho = document.querySelector(".cabecalho");
+    cabecalho.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+    const banner1 = document.querySelector(".banner-1");
+    banner1.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+    const banner2 = document.querySelector(".banner-2");
+    banner2.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+    tmp = setTimeout(mudarCor, 1000);
+
+}
+
+
+mudarimage();
+
+function mudarimage() {
+
+    let r = 0;
+    let g = 0;
+    let b = 0;
+
+    r = Math.round(Math.random() * 255);
+    g = Math.round(Math.random() * 255);
+    b = Math.round(Math.random() * 255);
+
+    const cabecalho = document.querySelector(".cabecalho");
+    
+
+    tmp = setTimeout(mudarCor, 1000);
+
+}
+
+
+mudarimage();
+
+
+
+
